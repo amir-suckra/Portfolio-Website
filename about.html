@@ -41,10 +41,16 @@
       </div>
       <div class="about__grid">
         <div class="about__text">
-          <h2 style="font-size: var(--fs-h3); margin-bottom: 1rem;">Hi, I'm Amir</h2>
+          <div class="about__intro">
+            <img class="about__photo" src="assets/images/amir-suckra.webp" alt="Portrait of Amir Suckra" width="140" height="140">
+            <div>
+              <h2 style="font-size: var(--fs-h3); margin-bottom: 0.5rem;">Hi, I'm Amir</h2>
+              <p style="margin-bottom:0;">Aerospace Engineering major at Bergen Tech · Class of 2027 · 3.9 GPA · National Honor Society</p>
+            </div>
+          </div>
           <p>I'm Amir Suckra, an aerospace engineering student at Bergen County Technical High School – Teterboro, where I study Aerospace, Aeronautical and Astronautical Engineering. Alongside high school, I've taken college-level engineering coursework through dual enrollment at William Paterson University, The University of Texas at Austin, and the New Jersey Institute of Technology.</p>
-          <p>Today I'm a Research Intern at Teachers College, Columbia University, helping research and develop science and math curriculum with Dr. Christopher Emdin, Professor of Science Education and Director of STEAM, DREAM &amp; IdeaLab. Outside the classroom, I work as a river guide with Brooklyn to Alaska in Anchorage, Alaska.</p>
-          <p>Whether it's a 3D-printed puzzle cube, a SEAPERCH underwater ROV, or an airfoil design, I like taking ideas from concept to a working build — and I enjoy doing it with a team, through collaborative problem solving.</p>
+          <p>Today I'm a Research Intern at Teachers College, Columbia University, helping research and develop science and math curriculum with Dr. Christopher Emdin, Professor of Science Education and Director of STEAM, DREAM &amp; IdeaLab. Outside the classroom, I'm a youth counselor and guide with Brooklyn to Alaska, leading groups of middle and high school students from New York City to Alaska's national parks. I also volunteer with the Joyful Youths Foundation, supporting elementary schools in Jamaica.</p>
+          <p>Whether it's a hardwood puzzle cube, a SEAPERCH underwater ROV, or an airfoil design, I like taking ideas from concept to a working build — and I enjoy doing it with a team, through collaborative problem solving.</p>
 
           <h2 style="font-size: var(--fs-h3); margin-top: 2rem; margin-bottom: 1rem;">Experience</h2>
           <ul class="about__timeline">
@@ -54,8 +60,28 @@
               <p style="margin-bottom:0;">Research and development of science and math curriculum with Dr. Christopher Emdin, Professor of Science Education and Director of STEAM, DREAM &amp; IdeaLab.</p>
             </li>
             <li>
-              <h4>River Guide — Brooklyn to Alaska</h4>
-              <p style="margin-bottom:0;font-size:var(--fs-sm);">June 2025 – Present · Anchorage, Alaska</p>
+              <h4>Youth Counselor &amp; River Guide — Brooklyn to Alaska</h4>
+              <p style="margin-bottom:0.25rem;font-size:var(--fs-sm);">June 2025 – Present · Anchorage &amp; Wrangell-St. Elias National Park and Preserve, Alaska</p>
+              <ul>
+                <li>Took part in the program, then was selected to lead a group of middle and high school boys on an educational journey from New York City to Alaska.</li>
+                <li>Guide participants through national parks, cultural landmarks, and outdoor activities, building teamwork, leadership, and environmental awareness.</li>
+                <li>Provide daily counseling support and help with travel logistics, safety, and learning sessions on Alaskan wildlife, geography, and Indigenous heritage.</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Volunteer — Joyful Youths Foundation, Inc.</h4>
+              <p style="margin-bottom:0.25rem;font-size:var(--fs-sm);">Summer 2024 – Present · Jamaica, W.I.</p>
+              <ul>
+                <li>Help organize and lead fundraising to support local elementary schools.</li>
+                <li>Collect, package, and distribute school supplies to students and staff.</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Volunteer — Community Food Bank of New Jersey</h4>
+              <p style="margin-bottom:0.25rem;font-size:var(--fs-sm);">Summer 2022 · Hillside, NJ</p>
+              <ul>
+                <li>Youth leadership and volunteer initiative fighting food insecurity: organized food drives, sorted donations, and distributed meals to families in need.</li>
+              </ul>
             </li>
           </ul>
 
@@ -63,7 +89,7 @@
           <ul class="about__timeline">
             <li>
               <h4>Bergen County Technical High School – Teterboro</h4>
-              <p style="margin-bottom:0;font-size:var(--fs-sm);">Aerospace, Aeronautical and Astronautical Engineering · September 2023 – June 2027</p>
+              <p style="margin-bottom:0;font-size:var(--fs-sm);">Aerospace, Aeronautical and Astronautical Engineering · September 2023 – June 2027 · 3.9 GPA</p>
             </li>
             <li>
               <h4>New Jersey Institute of Technology</h4>
@@ -79,13 +105,23 @@
             </li>
           </ul>
 
+          <h2 style="font-size: var(--fs-h3); margin-top: 2rem; margin-bottom: 1rem;">Honors &amp; Activities</h2>
+          <ul class="about__list">
+            <li>National Honor Society</li>
+            <li>Honor Roll</li>
+            <li>Varsity Lacrosse · Evolution Club Lacrosse</li>
+            <li>Junior Varsity Basketball · Prospect Club Basketball</li>
+            <li>Black Student Union</li>
+          </ul>
+
           <h2 style="font-size: var(--fs-h3); margin-top: 2rem; margin-bottom: 1rem;">Certifications</h2>
-          <ul style="color: var(--color-text-muted); margin-bottom: 1.5rem; padding-left: 1.4rem;">
+          <ul class="about__list">
             <li>Heartsaver First Aid CPR AED</li>
           </ul>
 
           <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-            <a href="contact.html" class="btn btn--primary">Get in Touch</a>
+            <a href="assets/docs/Amir_Suckra_Resume.pdf" class="btn btn--primary" data-resume-open>View Resume</a>
+            <a href="contact.html" class="btn btn--outline">Get in Touch</a>
             <a href="coursework.html" class="btn btn--outline">Coursework &amp; Competitions</a>
             <a href="https://www.linkedin.com/in/amir-suckra-32a355405" target="_blank" rel="noopener" class="btn btn--outline">View LinkedIn</a>
           </div>
@@ -128,9 +164,22 @@
           <div class="skill__category">
             <h4>Tools</h4>
             <div class="skill__tags">
-              <span class="skill__tag">CAD Software</span>
+              <span class="skill__tag">Autodesk Inventor</span>
+              <span class="skill__tag">MATLAB</span>
+              <span class="skill__tag">Excel</span>
               <span class="skill__tag">Multisim</span>
-              <span class="skill__tag">Electronic Music Tools</span>
+              <span class="skill__tag">Arduino</span>
+              <span class="skill__tag">Microsoft Office</span>
+              <span class="skill__tag">Google Drive</span>
+            </div>
+          </div>
+          <div class="skill__category">
+            <h4>Leadership &amp; Languages</h4>
+            <div class="skill__tags">
+              <span class="skill__tag">Youth Mentoring</span>
+              <span class="skill__tag">Technical Writing</span>
+              <span class="skill__tag">Logistics Planning</span>
+              <span class="skill__tag">Spanish (Basic)</span>
             </div>
           </div>
         </div>
@@ -148,6 +197,21 @@
     </div>
   </div>
 </footer>
+
+<dialog class="resume-dialog" id="resumeDialog" aria-labelledby="resumeDialogTitle">
+  <div class="resume-dialog__bar">
+    <h2 id="resumeDialogTitle">Resume — Amir Suckra</h2>
+    <div class="resume-dialog__actions">
+      <a href="assets/docs/Amir_Suckra_Resume.pdf" class="btn btn--primary" download>Download PDF</a>
+      <a href="assets/docs/Amir_Suckra_Resume.pdf" class="btn btn--outline" target="_blank" rel="noopener">Open</a>
+      <button type="button" class="resume-dialog__close" data-resume-close aria-label="Close resume">&times;</button>
+    </div>
+  </div>
+  <div class="resume-dialog__body">
+    <img src="assets/docs/resume-page-1.webp" alt="Resume page 1: education at Bergen Technical High School, aerospace engineering major, class of 2027 with a 3.9 GPA; experience with Brooklyn to Alaska, Joyful Youths Foundation, and the Community Food Bank of New Jersey." width="1275" height="1650" loading="lazy">
+    <img src="assets/docs/resume-page-2.webp" alt="Resume page 2: skills including CAD in Autodesk Inventor, MATLAB and Excel data analysis, aerodynamics and propulsion; awards including National Honor Society, Honor Roll, varsity lacrosse, basketball, and Black Student Union." width="1275" height="1650" loading="lazy">
+  </div>
+</dialog>
 
 <script src="js/main.js"></script>
 </body>
