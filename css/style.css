@@ -110,6 +110,13 @@ footer { margin-top: auto; padding: 3rem 0 2rem; border-top: 1px solid var(--col
 .project-detail__content p { color: var(--color-text-muted); margin-bottom: 1.25rem; font-size: var(--fs-body); }
 .project-detail__content ul { color: var(--color-text-muted); margin-bottom: 1.25rem; padding-left: 1.4rem; }
 .project-detail__content li { margin-bottom: 0.5rem; }
+.project-detail__content ol.project-steps { color: var(--color-text-muted); margin-bottom: 1.25rem; padding-left: 1.4rem; }
+.project-steps li { margin-bottom: 0.6rem; padding-left: 0.25rem; }
+.project-steps li strong { color: var(--color-text); }
+.about__timeline { list-style: none; padding: 0; margin: 0 0 1.5rem; border-left: 2px solid var(--color-border); }
+.about__timeline li { position: relative; padding: 0 0 1.25rem 1.25rem; color: var(--color-text-muted); }
+.about__timeline li::before { content: ""; position: absolute; left: -7px; top: 0.45rem; width: 12px; height: 12px; border-radius: 50%; background: var(--color-accent); }
+.about__timeline h4 { color: var(--color-text); margin-bottom: 0.25rem; }
 .project-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
 .sidebar__card { background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; }
 .sidebar__card h3 { font-size: var(--fs-h3); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
