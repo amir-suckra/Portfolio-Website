@@ -73,7 +73,7 @@ Dark mode is the default. A toggle in the header lets users switch to light mode
 
 ## 📫 Contact
 
-- **Email:** asuckra@bergen.org
+- **Email:** suckra.amir@gmail.com
 - **LinkedIn:** linkedin.com/in/amir-suckra-32a355405
 - **GitHub:** github.com/amir-suckra
 
