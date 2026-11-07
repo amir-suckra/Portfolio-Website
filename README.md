@@ -1,6 +1,6 @@
 # Portfolio-Website
 
-Engineering portfolio website for **Amir Suckra** — showcasing aerospace, electronics, CAD, and engineering coursework projects from Bergen County Academies.
+Engineering portfolio website for **Amir Suckra** — showcasing aerospace, electronics, CAD, and engineering coursework projects from Bergen County Technical High School – Teterboro.
 
 ## 📁 Site Structure
 
@@ -73,8 +73,8 @@ Dark mode is the default. A toggle in the header lets users switch to light mode
 
 ## 📫 Contact
 
-- **Email:** asuckra@bergen.org
-- **LinkedIn:** linkedin.com/in/amir-suckra
+- **Email:** suckra.amir@gmail.com
+- **LinkedIn:** linkedin.com/in/amir-suckra-32a355405
 - **GitHub:** github.com/amir-suckra
 
 ---
