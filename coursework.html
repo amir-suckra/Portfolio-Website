@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coursework &amp; Competitions | Amir Suckra Engineering Portfolio</title>
+  <meta name="description" content="Amir Suckra's engineering coursework at Bergen County Technical High School – Teterboro, dual enrollment programs, and NASA HUNCH and StellarXplorers competitions.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container header__inner">
+    <a href="index.html" class="nav__logo">Amir Suckra.</a>
+    <nav>
+      <ul class="nav__list" id="navList">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="coursework.html" class="nav__link nav__link--active">Coursework</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav__actions">
+      <button class="theme-toggle" aria-label="Switch to light mode">🌙</button>
+      <button class="nav__hamburger" aria-expanded="false" aria-controls="navList" aria-label="Toggle menu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section__header" style="text-align: left;">
+        <h2>Coursework &amp; Competitions</h2>
+        <p style="margin: 0;">Four years in the Aerospace Engineering major at Bergen County Technical High School – Teterboro, college engineering credit through dual enrollment, and two national aerospace competitions.</p>
+      </div>
+
+      <nav class="page-toc" aria-label="On this page">
+        <a href="#courses">Engineering Courses</a>
+        <a href="#dual-enrollment">Dual Enrollment</a>
+        <a href="#competitions">Competitions</a>
+      </nav>
+
+      <!-- ===================== ENGINEERING COURSES ===================== -->
+      <h2 class="cw-heading" id="courses">Engineering Courses</h2>
+      <p class="cw-lead">The Aerospace Engineering major at Bergen Tech Teterboro runs as a four-year sequence: one engineering course in 9th grade, then major courses every year after. Each course is project-based, so most units end with something designed, built, tested, and documented.</p>
+
+      <article class="course-card">
+        <header class="course-card__header">
+          <span class="course-card__year">9th grade · 2023–24</span>
+          <h3>Introduction to Aerospace Engineering</h3>
+          <div class="skill__tags">
+            <span class="skill__tag">Flight Fundamentals</span>
+            <span class="skill__tag">Airfoils</span>
+            <span class="skill__tag">Technical Writing</span>
+            <span class="skill__tag">Team Projects</span>
+          </div>
+        </header>
+        <p>The foundation course for the major. It covers how aircraft fly (the four forces of flight, center of gravity, stability, control surfaces, aerodynamic forces and the atmosphere), the history of space exploration, and the engineering design process. Students practice it on hands-on team builds and write formal technical reports.</p>
+        <h4>Work from this course</h4>
+        <ul class="example-list">
+          <li><strong>SEAPERCH underwater ROV (Team AQUADUCKS).</strong> I designed, built, and iterated on a PVC-frame remotely operated vehicle for the SeaPerch pool course and wrote the team's technical design report. We 3D-modeled and printed a hook to grab and move objects, and revised it several times after it failed to pick things up. We also flipped the vertical-thrust motor so the ROV could lift, rebalanced buoyancy with pool noodles, re-soldered a broken controller wire, and cut away excess frame to reduce drag. That last change brought our average obstacle-course time down from about 25.4 s to 22.1 s.</li>
+          <li><strong>Airfoil design: NACA 23018.</strong> Starting from the Grumman F8F Bearcat's wing section, I used JavaFoil to get lift, drag, and moment coefficients at angles of attack from 0° to 30°. I then built a spreadsheet that predicts lift and drag at speeds from 10 to 60 mph, and scaled the airfoil coordinates to a 3.5-inch chord to import into Inventor and 3D-print for testing.</li>
+          <li><strong>Puzzle cube.</strong> The design brief came from a fictional furniture company: turn 27 scrap ¾″ hardwood cubes into a desktop puzzle. The puzzle needed five unique, interlocking pieces of four to six cubes each that assemble into a 2¼″ cube. I documented the build in a project presentation and build guide.</li>
+          <li><strong>Balsa glider.</strong> I built and trimmed a glider using control flaps and nose weight. My write-up looks honestly at why it would not fly straight and what the best fliers had in common (large swept wings, tall vertical stabilizers).</li>
+          <li><strong>Astronaut boredom research.</strong> As a four-person team, I researched and wrote a problem identification paper on how isolation and boredom on long-duration missions affect astronaut safety, nutrition, and mental health.</li>
+        </ul>
+      </article>
+
+      <article class="course-card">
+        <header class="course-card__header">
+          <span class="course-card__year">10th grade · 2024–25</span>
+          <h3>Aerospace Engineering Principles</h3>
+          <div class="skill__tags">
+            <span class="skill__tag">Engineer Your World (UT Austin)</span>
+            <span class="skill__tag">User-Centered Design</span>
+            <span class="skill__tag">Reverse Engineering</span>
+            <span class="skill__tag">Systems Engineering</span>
+          </div>
+        </header>
+        <p>This course is built on <em>Engineer Your World</em>, the University of Texas at Austin's high school engineering curriculum. Each unit is a full design challenge with a real customer: define the problem, gather user needs, benchmark existing products, generate and compare concepts with tools like Pugh charts and functional models, then build, test, and pitch a solution.</p>
+        <h4>Work from this course</h4>
+        <ul class="example-list">
+          <li><strong>Pinhole camera.</strong> I designed a working lensless camera with a light-tight box, a hand-made aluminum pinhole, a magnetic aperture cover, and a film holder. I also wrote both the build instructions and the end-user instructions, including features that make the camera easier to use.</li>
+          <li><strong>Reverse engineering a flashlight.</strong> Our team took apart a competitor's flashlight to see how it works. We interviewed users to learn what they need, benchmarked performance, mapped functions, and generated redesign ideas, then made a pitch to "management" for the strongest one.</li>
+          <li><strong>Safer buildings.</strong> I analyzed earthquake data to understand why some buildings fail while others survive, and weighed the competing priorities of owners, residents, and government. My team's research presentation on tuned mass dampers (Taipei 101, Citigroup Center, Shanghai Tower) proposed a pendulum damper for our building design, including its tradeoffs in space, cost, and maintenance.</li>
+          <li><strong>Camera payload systems project.</strong> In a team broken into subsystems (payload/electronics, structure, parachute), we built a system that had to be launched, take a photo, and land safely. Our design survived repeated test launches without damage and captured an image. My reflection names its biggest weakness (it was overweight, which hurt descent speed) and the lesson that subsystem teams need to communicate from day one.</li>
+          <li><strong>Engineering careers.</strong> I researched and presented on civil engineering as a profession.</li>
+        </ul>
+      </article>
+
+      <article class="course-card">
+        <header class="course-card__header">
+          <span class="course-card__year">10th grade · 2024–25 · Project Lead The Way</span>
+          <h3>Digital Electronics (PLTW)</h3>
+          <div class="skill__tags">
+            <span class="skill__tag">Boolean Logic</span>
+            <span class="skill__tag">K-Maps</span>
+            <span class="skill__tag">Multisim</span>
+            <span class="skill__tag">Breadboarding</span>
+            <span class="skill__tag">Soldering</span>
+            <span class="skill__tag">Arduino</span>
+          </div>
+        </header>
+        <p>Digital Electronics is a Project Lead The Way (PLTW) course on the circuits inside every modern device. It moves through four units: foundations of electronics (components, analog vs. digital signals, the 555 timer, soldering), combinational logic (truth tables, Boolean algebra, De Morgan's theorems, Karnaugh maps, NAND/NOR-only design, number systems and adders), sequential logic (flip-flops, shift registers, synchronous and asynchronous counters), and controlling real-world systems with state machines and microcontrollers. Designs are simulated in Multisim before being built on a breadboard.</p>
+        <h4>Work from this course</h4>
+        <ul class="example-list">
+          <li><strong>Soldered random number generator.</strong> I soldered a working circuit board, then tested its output over 100 trials to check how evenly it distributes numbers.</li>
+          <li><strong>Majority-vote machine.</strong> I designed an electronic voting circuit for a four-member board where the president breaks ties. I worked from truth table to Boolean simplification, then built it with only AND, OR, and NOT gates.</li>
+          <li><strong>Fireplace control circuit.</strong> I redesigned a gas fireplace safety circuit so it stays lit when three of four flame sensors agree, and added a diagnostic output that flags a faulty sensor. I simplified both with K-maps, implemented one in NAND-only and one in NOR-only logic, and verified them in Multisim.</li>
+          <li><strong>Seven-segment "date of birth" display.</strong> This is a three-input, seven-output combinational circuit that steps through a date on a seven-segment display. I K-mapped each segment, built at least one in NAND-only and one in NOR-only logic, simulated it, and then breadboarded it.</li>
+          <li><strong>Counters and state machines.</strong> I built asynchronous and synchronous up/down counters with flip-flops and MSI counter chips, and worked through a tollbooth state machine.</li>
+          <li><strong>Microcontrollers.</strong> I wrote Arduino sketches that read buttons and potentiometers, read a two-axis accelerometer, and drive a servo with pulse-width modulation (PWM).</li>
+        </ul>
+      </article>
+
+      <article class="course-card">
+        <header class="course-card__header">
+          <span class="course-card__year">11th grade · 2025–26</span>
+          <h3>Applied Aerospace Engineering</h3>
+          <div class="skill__tags">
+            <span class="skill__tag">MATLAB</span>
+            <span class="skill__tag">Data Analysis</span>
+            <span class="skill__tag">Aerodynamics</span>
+            <span class="skill__tag">Flow Visualization</span>
+          </div>
+        </header>
+        <p>This course applies programming and analysis to aerospace problems. Students learn MATLAB from the ground up (variables, arrays and matrix operations, order of operations, input/output, plotting), then use it to clean real data sets, visualize results, and compare aerodynamic designs without building a physical model for every idea.</p>
+        <h4>Work from this course</h4>
+        <ul class="example-list">
+          <li><strong>Rocket nose cone study.</strong> I researched conical, tangent and secant ogive, ellipsoidal, parabolic, and Haack-series nose cones, then wrote predictions for which speed regime each shape suits best. I modeled the shapes and used MATLAB to import each STL file, extract its profile, and visualize the pressure distribution, stagnation points, and flow separation around it. I compared the cones at 25–100 m/s and made the case for the tangent ogive as the best balance of low flow disturbance and internal volume.</li>
+          <li><strong>Drag optimization.</strong> I redesigned my nose cone to be sharper and slimmer to reduce pressure drag, then re-ran the analysis. The redesign's pressure range was wider, but its average performance was better than the original.</li>
+          <li><strong>Flight telemetry analysis.</strong> I wrote a MATLAB script that imports a flight-telemetry spreadsheet, removes rows with missing altitude, velocity, or chamber-pressure data, calculates the mean velocity between 25 and 50 km altitude, and plots the flight profile colored by velocity.</li>
+          <li><strong>MATLAB programming.</strong> I completed a series of programming assignments, including array and bar-graph exercises, a scholarship-eligibility script, and a data-audit activity.</li>
+        </ul>
+      </article>
+
+      <article class="course-card">
+        <header class="course-card__header">
+          <span class="course-card__year">12th grade · 2026–27 · In progress</span>
+          <h3>Aerospace Engineering Seminar</h3>
+          <div class="skill__tags">
+            <span class="skill__tag">NASA HUNCH</span>
+            <span class="skill__tag">Problem Definition</span>
+            <span class="skill__tag">Requirements</span>
+          </div>
+        </header>
+        <p>The senior capstone for the major. This year the seminar is built around a real NASA HUNCH design challenge. Teams spend the first unit defining the problem before designing anything: they work out who the user is, the environment, requirements and constraints, existing solutions, and what they still need to learn, and finish with a final problem brief. <a href="#hunch">More on my HUNCH project below.</a></p>
+      </article>
+
+      <!-- ===================== DUAL ENROLLMENT ===================== -->
+      <h2 class="cw-heading" id="dual-enrollment">Dual Enrollment</h2>
+      <p class="cw-lead">Alongside the high school sequence, I've earned college credit through dual enrollment with three universities. In dual enrollment, high school students take college-level courses and earn transcripted credit from the partner university while still in high school.</p>
+
+      <div class="de-grid">
+        <article class="de-card">
+          <span class="course-card__year">Sept 2024 – Jan 2025</span>
+          <h3>William Paterson University of New Jersey</h3>
+          <p class="de-card__field">Dual Enrollment · Engineering</p>
+          <p>William Paterson's dual enrollment program lets New Jersey high school students take college-level courses, taught at their own high school or through the university, and earn William Paterson credit.</p>
+        </article>
+        <article class="de-card">
+          <span class="course-card__year">Jan 2025 – June 2025</span>
+          <h3>The University of Texas at Austin</h3>
+          <p class="de-card__field">Dual Enrollment · Engineering</p>
+          <p>UT Austin's Cockrell School of Engineering created <em>Engineer Your World</em>, a high school engineering curriculum that offers an optional dual enrollment pathway to earn UT college credit. Engineer Your World is the curriculum my Aerospace Engineering Principles course was built on: user-centered design, reverse engineering, data-driven decisions, and systems engineering.</p>
+        </article>
+        <article class="de-card">
+          <span class="course-card__year">Sept 2025 – June 2026</span>
+          <h3>New Jersey Institute of Technology</h3>
+          <p class="de-card__field">Dual Enrollment</p>
+          <p>NJIT's dual enrollment program partners with New Jersey high schools to offer college-credit courses taught by teachers certified as NJIT adjunct faculty, so students earn NJIT credit while staying in their high school classroom.</p>
+        </article>
+      </div>
+
+      <!-- ===================== COMPETITIONS ===================== -->
+      <h2 class="cw-heading" id="competitions">Competitions &amp; Programs</h2>
+
+      <article class="course-card" id="hunch">
+        <header class="course-card__header">
+          <span class="course-card__year">2026–27 · Current</span>
+          <h3>NASA HUNCH: Pneumatic Tools on Mars</h3>
+          <div class="skill__tags">
+            <span class="skill__tag">Design &amp; Engineering</span>
+            <span class="skill__tag">CAD</span>
+            <span class="skill__tag">3D Printing</span>
+            <span class="skill__tag">Pneumatics</span>
+          </div>
+        </header>
+        <p><strong>NASA HUNCH</strong> (High school students United with NASA to Create Hardware) partners NASA with high schools across the country. Students design and build real products for NASA and the International Space Station, from flight hardware to tools and crew equipment.</p>
+        <p>My team is working on <strong>Pneumatic Tools on Mars</strong>. Replacement batteries and parts take months to reach Mars, and batteries degrade and can't be repaired there. A compressed-gas tank, by contrast, could be refilled from the thin CO₂ atmosphere, and a mechanical tool could be repaired with a 3D printer. The challenge is to design, build, and test a <strong>3D-printed, air-powered motor and tool</strong> running on a 12 oz tank at 80 psi. The tool must either drive a 4-inch bolt into a locking nut or cut through 1/8″ aluminum angle, while staying easy to take apart and repair when parts wear out.</p>
+        <h4>My contributions so far (design &amp; engineering)</h4>
+        <ul class="example-list">
+          <li><strong>Defining the problem.</strong> Restating NASA's challenge in plain language, building a known / need-to-know / research-next table, and drafting the team's problem statement.</li>
+          <li><strong>Identifying the deciding constraint.</strong> I argued that repairability (being able to take the tool apart and put it back together) is the requirement most likely to eliminate weak designs. It will shape how we seal and fasten the tool, and we can verify it by repeatedly disassembling and reassembling our prototypes.</li>
+          <li><strong>Studying existing solutions.</strong> Researching hydraulic and pneumatic tools showed us that the design has to release or recirculate exhaust gas safely, and that the limited gas pressure we can use is a constraint we can't ignore.</li>
+          <li><strong>Scoping the problem statement.</strong> We were tempted to include an ergonomic grip but cut it from the problem statement to keep the focus on the requirements that matter most. I also gave and received structured feedback in project briefings with other teams.</li>
+        </ul>
+      </article>
+
+      <article class="course-card">
+        <header class="course-card__header">
+          <span class="course-card__year">Current</span>
+          <h3>StellarXplorers: National High School Space Challenge</h3>
+          <div class="skill__tags">
+            <span class="skill__tag">Team Member</span>
+            <span class="skill__tag">Orbit Planning</span>
+            <span class="skill__tag">Satellite Design</span>
+            <span class="skill__tag">Systems Tool Kit (STK)</span>
+          </div>
+        </header>
+        <p><strong>StellarXplorers</strong> is a national space-system design competition run by the Air &amp; Space Forces Association. Each round gives teams a realistic mission scenario with constraints. Teams then solve the kinds of problems real space engineers face: determining orbits, selecting satellite components within mass, power, and cost budgets, and planning launch vehicles. Teams train on and compete with <strong>Systems Tool Kit (STK)</strong>, the professional orbit and mission simulation software used across the aerospace industry. The strongest teams from the qualifying and semifinal rounds advance to a national finals competition each spring.</p>
+        <p>I compete as a member of my school's team, applying the orbital mechanics and systems engineering from my aerospace coursework to complete mission scenarios.</p>
+      </article>
+
+      <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top: 2rem;">
+        <a href="projects.html" class="btn btn--primary">See Project Pages</a>
+        <a href="about.html" class="btn btn--outline">About Me</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer__inner">
+    <p class="footer__copy">&copy; 2026 Amir Suckra. Built for engineering coursework.</p>
+    <div class="socials" aria-label="Social links">
+      <a href="https://linkedin.com/in/amir-suckra-32a355405" target="_blank" rel="noopener" title="LinkedIn">in</a>
+      <a href="https://github.com/amir-suckra" target="_blank" rel="noopener" title="GitHub">gh</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
