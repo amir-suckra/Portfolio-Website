@@ -56,7 +56,6 @@
         <div class="project-detail__content">
           <h2>Project Goal</h2>
           <p>Designed and analyzed a wing section based on the <strong>NACA 23018</strong> airfoil, the profile used on the Grumman F8F Bearcat. The project explored how airfoil geometry and angle of attack drive lift and drag.</p>
-          <p class="visually-hidden"><strong>TODO:</strong> Replace this placeholder description with details about your actual airfoil design project — software used, airfoil type (NACA series, custom), test conditions, and results.</p>
           <h2>What I Built</h2>
           <p>I used JavaFoil to calculate lift, drag, and moment coefficients from 0° to 30° angle of attack, then built a spreadsheet that predicts lift and drag forces at airspeeds from 10 to 60 mph. I scaled the airfoil coordinates to a 3.5-inch chord, imported them into Autodesk Inventor, and modeled the wing section for 3D printing.</p>
           <h2>Photos &amp; Visuals</h2>
@@ -80,16 +79,18 @@
           <p>Lift climbs steadily up to about 20°, where the wing reaches its maximum lift and then starts to stall. The best efficiency (highest lift-to-drag ratio) comes at a much shallower angle, around 5°.</p>
           <h2>Build Process</h2>
           <ol class="project-steps">
-            <li><strong>Plan</strong> — defined requirements and constraints for the project.</li>
-            <li><strong>Design</strong> — sketched, modeled, or simulated the solution before building.</li>
-            <li><strong>Build</strong> — fabricated, assembled, or implemented the design.</li>
-            <li><strong>Test &amp; Refine</strong> — evaluated results and iterated on the design.</li>
+            <li><strong>Choose an aircraft.</strong> Researched World War II Navy fighters and their wing sections, then chose the NACA 23018 profile from the Grumman F8F Bearcat.</li>
+            <li><strong>Analyze the airfoil.</strong> Ran the profile through JavaFoil to get lift, drag, and moment coefficients from 0° to 30° angle of attack.</li>
+            <li><strong>Predict real forces.</strong> Built a spreadsheet that turns those coefficients into lift and drag forces at airspeeds from 10 to 60 mph for my wing area.</li>
+            <li><strong>Scale the geometry.</strong> Scaled the normalized airfoil coordinates to a 3.5-inch chord.</li>
+            <li><strong>Model it in CAD.</strong> Imported the coordinates into Autodesk Inventor, extruded the wing section, and exported it as an STL for 3D printing.</li>
           </ol>
-          <p class="visually-hidden"><strong>TODO:</strong> Replace the generic steps above with the specific steps you took on this project, and add photos of each stage.</p>
+          <h2>My Role</h2>
+          <p>This was an individual project. I chose the airfoil, ran the JavaFoil analysis, built the lift and drag spreadsheet, and modeled the wing section in Inventor.</p>
           <h2>Key Problem Solved</h2>
-          <p>Balancing lift-to-drag ratio across different angles of attack while maintaining structural feasibility of the airfoil profile.</p>
-          <h2>Skills Gained</h2>
-          <p>Fundamentals of aerodynamics, how camber and thickness affect pressure distribution, and the iterative nature of engineering design.</p>
+          <p>Turning a published airfoil profile into a real, buildable part: getting from normalized coordinates and dimensionless coefficients to a scaled CAD model and force predictions for an actual wing.</p>
+          <h2>What I Learned</h2>
+          <p>How angle of attack drives lift, drag, and stall; reading airfoil performance data; using a spreadsheet as an engineering model; and building precise CAD geometry from coordinate data.</p>
         </div>
         <div class="project-sidebar">
           <div class="sidebar__card">
@@ -101,6 +102,7 @@
           <div class="sidebar__card">
             <h3>📋 Project Snapshot</h3>
             <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0.5rem;"><strong>Course:</strong> Introduction to Aerospace Engineering</p>
+            <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0.5rem;"><strong>Role:</strong> Individual project</p>
             <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0.5rem;"><strong>Status:</strong> Completed</p>
             <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0;"><strong>Type:</strong> Coursework</p>
           </div>

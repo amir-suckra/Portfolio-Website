@@ -1,90 +1,57 @@
-# Portfolio-Website
+# Amir Suckra: Engineering Portfolio
 
-Engineering portfolio website for **Amir Suckra** — showcasing aerospace, electronics, CAD, and engineering coursework projects from Bergen County Technical High School – Teterboro.
+Personal portfolio website for **Amir Suckra**, an Aerospace Engineering student at Bergen County Technical High School – Teterboro. It presents my background, coursework, projects, competitions (NASA HUNCH and StellarXplorers), skills, resume, and a way to contact me.
 
-## 📁 Site Structure
+## Tech stack
+
+- **Plain HTML, CSS, and JavaScript.** There is no framework and no build step.
+- **Contact form:** [Formspree](https://formspree.io).
+- **Images:** compressed WebP, with 640px `-sm.webp` versions for thumbnails.
+- **Built with an AI coding tool:** [Claude Code](https://claude.com/claude-code) by Anthropic. It was used to write and refactor the pages, organize content from my coursework files, optimize images, and test the site.
+
+## Site structure
 
 ```
-Portfolio-Website/
-├── index.html                 # Home — hero, about preview, featured projects
-├── about.html                 # Full bio, skills, education
-├── projects.html              # Projects index — filterable grid of all projects
-├── contact.html               # Contact form + contact info
-├── projects/                  # Individual project detail pages (12 pages)
-│   ├── airfoil-design.html
-│   ├── cad-modeling.html
-│   ├── puzzle-cube.html
-│   ├── seaperch.html
-│   ├── aerial-imaging.html
-│   ├── electronic-music.html
-│   ├── pinhole-camera.html
-│   ├── safer-buildings.html
-│   ├── digital-electronics.html
-│   ├── aerospace-engineering-principles.html
-│   └── introduction-to-aerospace-engineering.html
-├── css/
-│   └── style.css              # Global styles (dark mode, responsive, print)
-├── js/
-│   └── main.js                # Theme toggle, mobile nav, filters, contact form
-└── assets/
-    └── images/
-        ├── amir-suckra-640.webp / -280.webp  # profile photo sizes
-        ├── logos/                 # program and university logos (webp)
-        └── projects/              # project images; *-sm.webp = 640px thumbnails
+├── index.html          # Home: hero, about preview, featured projects, contact
+├── about.html          # Bio, experience, education, honors, skills, resume viewer
+├── coursework.html     # Courses, dual enrollment, NASA HUNCH, StellarXplorers
+├── projects.html       # Filterable grid of projects
+├── projects/*.html     # One page per project (description, role, process, what I learned)
+├── contact.html        # Contact form, email, LinkedIn, GitHub
+├── css/style.css       # All styles (light/dark theme, responsive layout)
+├── js/main.js          # Theme toggle, mobile menu, project filters, contact form, resume viewer
+├── assets/docs/        # Resume PDF and page images for the resume viewer
+├── assets/images/      # Photo, logos, project images
+├── assets/models/      # Downloadable 3D model (airfoil STL)
+└── vercel.json         # Vercel caching headers
 ```
 
-## 🚀 Getting Started
+## Run it locally
 
-This is a **static, zero-dependency** site — no build step required.
-
-### Local development
-Open any HTML file directly in your browser, or serve with a local server:
+Because it is a static site, any local web server works:
 
 ```bash
-# Using Python
 python3 -m http.server 8000
-# Then visit http://localhost:8000
-
-# Using Node.js (if you have http-server)
-npx http-server
 ```
 
-## ✏️ Customizing Your Content
+Then open http://localhost:8000. You can also open `index.html` directly in a browser.
 
-### 1. Replace placeholder text
-Every page contains `<!-- TODO -->` style placeholder content marked with a `visually-hidden` paragraph or `todo-badge` badge. Look for:
-- Profile photo: `assets/images/amir-suckra.webp` (home hero and About page)
-- Resume: `assets/docs/Amir_Suckra_Resume.pdf` (public copy with street address and phone removed) plus page images `resume-page-1.webp` / `resume-page-2.webp` used by the in-page resume viewer. Re-export these if the resume changes.
-- Project descriptions → edit each `projects/*.html` file
-- Contact form → messages are sent through Formspree (`https://formspree.io/f/mvkknwrz`, set in the form's `data-endpoint` in `contact.html`). Clearing `data-endpoint` makes the form fall back to opening the visitor's email app.
-- Social links → update the LinkedIn/GitHub URLs in the footer of each page
+## Deploy on Vercel
 
-### 2. Add project images
-Project card thumbnails use CSS gradients by default. To add real images, replace the `.project-card__thumb` div with an `` tag pointing to `assets/images/your-project.jpg`.
+1. Push this repository to GitHub (it must be public).
+2. At [vercel.com](https://vercel.com), choose **Add New → Project** and import this repository.
+3. Use **Framework Preset: Other**. Leave the build command empty and the output directory as the repository root.
+4. Click **Deploy**. The site goes live at `https://<project-name>.vercel.app`, and Vercel redeploys automatically on every push to `main`.
 
-### 3. Theme
-Dark mode is the default. A toggle in the header lets users switch to light mode; preference is saved in `localStorage`.
+## Updating content
 
-## 🌐 Deployment
+- **Projects:** edit `projects/<name>.html` and its card in `projects.html`.
+- **Resume:** replace `assets/docs/Amir_Suckra_Resume.pdf` and the two `resume-page-*.webp` images used by the viewer.
+- **Images:** add WebP files to `assets/images/projects/` along with a 640px `-sm.webp` version.
+- **Contact form:** messages go to the Formspree form set in the `data-endpoint` attribute of the form in `contact.html`.
 
-### GitHub Pages (recommended)
-1. Push this repo to GitHub
-2. Go to **Settings → Pages**
-3. Set source to **Deploy from a branch** → `main` / `/ (root)`
-4. Your site will be live at `https://<your-username>.github.io/Portfolio-Website/`
+## Contact
 
-## 📫 Contact
-
-- **Email:** suckra.amir@gmail.com
-- **LinkedIn:** linkedin.com/in/amir-suckra-32a355405
-- **GitHub:** github.com/amir-suckra
-
----
-
-*Built with semantic HTML5, modern CSS (CSS variables, dark mode, responsive grid), and vanilla JavaScript.*
-# Portfolio-Website
-## ⚡ Performance notes
-
-- Images are WebP. Each project image has a full-size version (opened on click) and a `-sm.webp` 640px version used for thumbnails, figures, and gallery tiles (`srcset`).
-- Every `<img>` has `width`/`height` (no layout shift) and `decoding="async"`; below-the-fold images use `loading="lazy"`.
-- `js/main.js` loads with `defer`.
+- Email: suckra.amir@gmail.com
+- LinkedIn: [linkedin.com/in/amir-suckra-32a355405](https://www.linkedin.com/in/amir-suckra-32a355405)
+- GitHub: [github.com/amir-suckra](https://github.com/amir-suckra)
