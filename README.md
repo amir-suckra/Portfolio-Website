@@ -20,7 +20,6 @@ Portfolio-Website/
 │   ├── pinhole-camera.html
 │   ├── safer-buildings.html
 │   ├── digital-electronics.html
-│   ├── multisim-circuitry.html
 │   ├── aerospace-engineering-principles.html
 │   └── introduction-to-aerospace-engineering.html
 ├── css/
@@ -29,7 +28,9 @@ Portfolio-Website/
 │   └── main.js                # Theme toggle, mobile nav, filters, contact form
 └── assets/
     └── images/
-        └── profile-placeholder.svg  # Replace with your photo
+        ├── amir-suckra-640.webp / -280.webp  # profile photo sizes
+        ├── logos/                 # program and university logos (webp)
+        └── projects/              # project images; *-sm.webp = 640px thumbnails
 ```
 
 ## 🚀 Getting Started
@@ -82,3 +83,8 @@ Dark mode is the default. A toggle in the header lets users switch to light mode
 
 *Built with semantic HTML5, modern CSS (CSS variables, dark mode, responsive grid), and vanilla JavaScript.*
 # Portfolio-Website
+## ⚡ Performance notes
+
+- Images are WebP. Each project image has a full-size version (opened on click) and a `-sm.webp` 640px version used for thumbnails, figures, and gallery tiles (`srcset`).
+- Every `<img>` has `width`/`height` (no layout shift) and `decoding="async"`; below-the-fold images use `loading="lazy"`.
+- `js/main.js` loads with `defer`.
