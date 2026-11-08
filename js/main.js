@@ -86,24 +86,39 @@
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const formData = new FormData(contactForm);
-      fetch(contactForm.action, {
-        method: 'POST',
-        body: formData,
-        headers: { Accept: 'application/json' },
-      })
-        .then((response) => {
-          if (response.ok) {
+      if (!contactForm.reportValidity()) return;
+      const name = contactForm.name.value.trim();
+      const email = contactForm.email.value.trim();
+      const message = contactForm.message.value.trim();
+      const endpoint = (contactForm.dataset.endpoint || '').trim();
+      const toAddress = contactForm.dataset.email;
+
+      // Option 1: a form service (e.g. Formspree) delivers straight to the inbox
+      if (endpoint) {
+        const submitBtn = contactForm.querySelector('[type="submit"]');
+        submitBtn.disabled = true;
+        fetch(endpoint, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' },
+        })
+          .then((response) => {
+            if (!response.ok) throw new Error('Form submission failed');
             showFormMessage('Thanks! Your message has been sent.', 'success');
             contactForm.reset();
-          } else {
-            throw new Error('Form submission failed');
-          }
-        })
-        .catch((error) => {
-          console.error(error);
-          showFormMessage('Oops, something went wrong. Please email me directly.', 'error');
-        });
+          })
+          .catch(() => {
+            showFormMessage(`Sorry, that didn't go through. Please email me at ${toAddress}.`, 'error');
+          })
+          .finally(() => { submitBtn.disabled = false; });
+        return;
+      }
+
+      // Option 2 (default): open the visitor's email app with the message filled in
+      const subject = `Portfolio message from ${name}`;
+      const body = `${message}\n\n— ${name}\n${email}`;
+      window.location.href = `mailto:${toAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      showFormMessage(`Your email app should open with the message ready — just press send. If nothing opens, email me at ${toAddress}.`, 'success');
     });
   }
 
@@ -112,7 +127,7 @@
     formMessage.textContent = text;
     formMessage.className = `form-message form-message--${type}`;
     formMessage.style.display = 'block';
-    setTimeout(() => { formMessage.style.display = 'none'; }, 5000);
+    formMessage.setAttribute('role', type === 'error' ? 'alert' : 'status');
   }
 
   const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
