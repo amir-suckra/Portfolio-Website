@@ -278,3 +278,26 @@ body.modal-open { overflow: hidden; }
 .course-context p { margin-bottom: 0 !important; font-size: var(--fs-sm) !important; }
 .project-detail__content a { color: var(--color-accent); }
 .project-detail__content a:hover { text-decoration: underline; }
+
+/* Project galleries */
+.project-gallery { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); margin: 0.5rem 0 2rem; scroll-margin-top: calc(var(--header-height) + 1rem); }
+.project-gallery--wide { grid-template-columns: 1fr; }
+.project-gallery figure { margin: 0; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; }
+.project-gallery a { display: block; background: #fff; }
+.project-gallery img { display: block; width: 100%; height: 220px; object-fit: contain; transition: transform var(--transition); }
+.project-gallery--wide img { height: auto; max-height: 420px; }
+.project-gallery img.is-photo { object-fit: cover; }
+.project-gallery a:hover img { transform: scale(1.02); }
+.project-gallery figcaption { font-size: var(--fs-xs); color: var(--color-text-muted); padding: 0.6rem 0.75rem; line-height: 1.45; }
+.project-card__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; background: #fff; }
+.project-card__thumb img.is-diagram { object-fit: contain; padding: 0.5rem; }
+.course-figures { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); margin: 1.25rem 0 0.25rem; }
+.course-figures figure { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; background: #fff; }
+.course-figures img { display: block; width: 100%; height: 160px; object-fit: cover; }
+.course-figures img.is-diagram { object-fit: contain; }
+.course-figures figcaption { font-size: var(--fs-xs); color: var(--color-text-muted); background: var(--color-surface); padding: 0.45rem 0.6rem; }
+.data-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); margin: 0.5rem 0 1.5rem; }
+.data-table th, .data-table td { border: 1px solid var(--color-border); padding: 0.4rem 0.55rem; text-align: center; color: var(--color-text-muted); }
+.data-table th { color: var(--color-text); background: var(--color-surface); }
+.table-scroll { overflow-x: auto; }
+.project-detail__content, .project-sidebar { min-width: 0; }
