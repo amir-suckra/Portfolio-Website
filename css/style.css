@@ -271,3 +271,10 @@ body.modal-open { overflow: hidden; }
 /* Card headers are <header> elements: don't inherit the site header's sticky bar styling */
 .course-card .course-card__header, [data-theme="light"] .course-card .course-card__header { position: static; z-index: auto; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; border-bottom: 0; }
 .org-logo--sm { width: 80px; height: 80px; padding: 0.4rem; margin-bottom: 1rem; }
+
+/* Course context callout on project pages */
+.course-context { background-color: var(--color-surface); border: 1px solid var(--color-border); border-left: 3px solid var(--color-accent); border-radius: var(--radius-md); padding: 1.1rem 1.25rem; margin-bottom: 2rem; }
+.course-context h3 { font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-accent); margin: 0 0 0.5rem; }
+.course-context p { margin-bottom: 0 !important; font-size: var(--fs-sm) !important; }
+.project-detail__content a { color: var(--color-accent); }
+.project-detail__content a:hover { text-decoration: underline; }
