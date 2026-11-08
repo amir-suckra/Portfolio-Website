@@ -270,3 +270,4 @@ body.modal-open { overflow: hidden; }
 @media (max-width: 560px) { .course-card__header--logo { flex-direction: column; align-items: flex-start; } .org-logo { width: 88px; height: 88px; } }
 /* Card headers are <header> elements: don't inherit the site header's sticky bar styling */
 .course-card .course-card__header, [data-theme="light"] .course-card .course-card__header { position: static; z-index: auto; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; border-bottom: 0; }
+.org-logo--sm { width: 80px; height: 80px; padding: 0.4rem; margin-bottom: 1rem; }
