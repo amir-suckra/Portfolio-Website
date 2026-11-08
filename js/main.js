@@ -127,7 +127,6 @@
   document.querySelectorAll('.project-card, .section__header, .skill__category, .contact-item').forEach((el) => {
     observer.observe(el);
   });
-})();
 
   function highlightNav() {
     if (sections.length === 0 || navLinks.length === 0) return;
@@ -152,3 +151,29 @@
     window.addEventListener('scroll', highlightNav);
     highlightNav();
   }
+
+  /* Resume viewer: opens a modal; without JS the trigger links open the PDF directly */
+  const resumeDialog = document.getElementById('resumeDialog');
+  if (resumeDialog && typeof resumeDialog.showModal === 'function') {
+    let lastTrigger = null;
+    document.querySelectorAll('[data-resume-open]').forEach((trigger) => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        lastTrigger = trigger;
+        resumeDialog.showModal();
+        document.body.classList.add('modal-open');
+      });
+    });
+    resumeDialog.querySelectorAll('[data-resume-close]').forEach((btn) => {
+      btn.addEventListener('click', () => resumeDialog.close());
+    });
+    // Click on the backdrop (outside the panel) closes the dialog
+    resumeDialog.addEventListener('click', (e) => {
+      if (e.target === resumeDialog) resumeDialog.close();
+    });
+    resumeDialog.addEventListener('close', () => {
+      document.body.classList.remove('modal-open');
+      if (lastTrigger) lastTrigger.focus();
+    });
+  }
+})();

@@ -32,6 +32,79 @@
   </div>
 </header>
 
+<main>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero__badges">
+        <span class="badge">Aerospace Engineering</span>
+        <span class="badge">Electronics</span>
+        <span class="badge">CAD &amp; Design</span>
+        <span class="badge">Student Projects</span>
+      </div>
+      <h1 class="hero__title">Engineering <span style="color: var(--color-accent)">Portfolio</span></h1>
+      <p class="hero__subtitle">
+        Amir Suckra — exploring aerospace design, electronics, CAD modeling, and hands-on engineering projects.
+        Built during coursework at Bergen County Technical High School – Teterboro.
+      </p>
+      <div class="hero__cta">
+        <a href="projects.html" class="btn btn--primary">View Projects</a>
+        <a href="assets/docs/Amir_Suckra_Resume.pdf" class="btn btn--outline" data-resume-open>View Resume</a>
+        <a href="about.html" class="btn btn--outline">About Me</a>
+      </div>
+      <div class="hero__highlights">
+        <span>Aerospace Engineering · Class of 2027</span>
+        <span>3.9 GPA</span>
+        <span>National Honor Society</span>
+        <span>Research Intern, Teachers College, Columbia</span>
+      </div>
+      <div class="hero__image">
+        <img src="assets/images/amir-suckra.webp" alt="Portrait of Amir Suckra in a gray suit and tie" width="320" height="320">
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" id="about">
+    <div class="container">
+      <div class="section__header">
+        <h2>About Me</h2>
+        <p>High school engineering student with a passion for aerospace, electronics, and CAD design.</p>
+      </div>
+      <div class="about__grid">
+        <div class="about__text">
+          <p>I'm Amir Suckra, an engineering student focused on aerospace engineering, electronics, and computational design. My work spans airfoil design, CAD modeling, circuit simulation, and hands-on build projects.</p>
+          <p>Every project here follows the same path — a clear goal, a design, a build, and testing until it works. Explore them below to see what I built and the skills I picked up along the way.</p>
+          <a href="about.html" class="btn btn--outline">Read Full Bio</a>
+        </div>
+        <div class="skills__list">
+          <div class="skill__category">
+            <h4>Aerospace</h4>
+            <div class="skill__tags">
+              <span class="skill__tag">Airfoil Design</span>
+              <span class="skill__tag">Aerial Imaging</span>
+              <span class="skill__tag">SEAPERCH</span>
+            </div>
+          </div>
+          <div class="skill__category">
+            <h4>Electronics</h4>
+            <div class="skill__tags">
+              <span class="skill__tag">Multisim</span>
+              <span class="skill__tag">Digital Electronics</span>
+              <span class="skill__tag">Circuitry</span>
+            </div>
+          </div>
+          <div class="skill__category">
+            <h4>Design &amp; Build</h4>
+            <div class="skill__tags">
+              <span class="skill__tag">CAD Modeling</span>
+              <span class="skill__tag">Puzzle Cube</span>
+              <span class="skill__tag">Pinhole Camera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="projects">
     <div class="container">
       <div class="section__header">
@@ -39,7 +112,45 @@
         <p>A selection of engineering projects from my coursework. Visit the full projects page for details.</p>
       </div>
       <div class="projects__grid" id="featuredGrid">
-        <!-- Project cards injected here -->
+        <a href="projects/seaperch.html" class="project-card" data-category="Aerospace">
+          <div class="project-card__thumb" data-label="View Project"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">SEAPERCH</h3>
+            <p class="project-card__excerpt">Team AQUADUCKS underwater ROV with a 3D-printed hook.</p>
+            <div class="project-card__tech">
+              <span class="skill__tag">SEAPERCH</span>
+              <span class="skill__tag">ROV</span>
+              <span class="skill__tag">Engineering</span>
+            </div>
+            <div class="project-card__links"><a href="projects/seaperch.html" class="project-card__link">View Project</a></div>
+          </div>
+        </a>
+        <a href="projects/airfoil-design.html" class="project-card" data-category="Aerospace">
+          <div class="project-card__thumb" data-label="View Project"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Airfoil Design</h3>
+            <p class="project-card__excerpt">Airfoil shape design and aerodynamic analysis.</p>
+            <div class="project-card__tech">
+              <span class="skill__tag">Aerospace</span>
+              <span class="skill__tag">CAD</span>
+              <span class="skill__tag">Airfoil</span>
+            </div>
+            <div class="project-card__links"><a href="projects/airfoil-design.html" class="project-card__link">View Project</a></div>
+          </div>
+        </a>
+        <a href="projects/digital-electronics.html" class="project-card" data-category="Electronics">
+          <div class="project-card__thumb" data-label="View Project"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Digital Electronics</h3>
+            <p class="project-card__excerpt">Digital logic circuits — gates, flip-flops, sequential circuit design.</p>
+            <div class="project-card__tech">
+              <span class="skill__tag">Digital Logic</span>
+              <span class="skill__tag">Circuits</span>
+              <span class="skill__tag">Electronics</span>
+            </div>
+            <div class="project-card__links"><a href="projects/digital-electronics.html" class="project-card__link">View Project</a></div>
+          </div>
+        </a>
       </div>
       <div style="text-align: center; margin-top: 2rem;">
         <a href="projects.html" class="btn btn--primary">View All Projects</a>
@@ -90,70 +201,21 @@
   </div>
 </footer>
 
+<dialog class="resume-dialog" id="resumeDialog" aria-labelledby="resumeDialogTitle">
+  <div class="resume-dialog__bar">
+    <h2 id="resumeDialogTitle">Resume — Amir Suckra</h2>
+    <div class="resume-dialog__actions">
+      <a href="assets/docs/Amir_Suckra_Resume.pdf" class="btn btn--primary" download>Download PDF</a>
+      <a href="assets/docs/Amir_Suckra_Resume.pdf" class="btn btn--outline" target="_blank" rel="noopener">Open</a>
+      <button type="button" class="resume-dialog__close" data-resume-close aria-label="Close resume">&times;</button>
+    </div>
+  </div>
+  <div class="resume-dialog__body">
+    <img src="assets/docs/resume-page-1.webp" alt="Resume page 1: education at Bergen Technical High School, aerospace engineering major, class of 2027 with a 3.9 GPA; experience with Brooklyn to Alaska, Joyful Youths Foundation, and the Community Food Bank of New Jersey." width="1275" height="1650" loading="lazy">
+    <img src="assets/docs/resume-page-2.webp" alt="Resume page 2: skills including CAD in Autodesk Inventor, MATLAB and Excel data analysis, aerodynamics and propulsion; awards including National Honor Society, Honor Roll, varsity lacrosse, basketball, and Black Student Union." width="1275" height="1650" loading="lazy">
+  </div>
+</dialog>
+
 <script src="js/main.js"></script>
 </body>
 </html>
-  <section class="section--tight" id="about">
-    <div class="container">
-      <div class="section__header">
-        <h2>About Me</h2>
-        <p>High school engineering student with a passion for aerospace, electronics, and CAD design.</p>
-      </div>
-      <div class="about__grid">
-        <div class="about__text">
-          <p>I'm Amir Suckra, an engineering student focused on aerospace engineering, electronics, and computational design. My work spans airfoil design, CAD modeling, circuit simulation, and hands-on build projects.</p>
-          <p>Every project here follows the same path — a clear goal, a design, a build, and testing until it works. Explore them below to see what I built and the skills I picked up along the way.</p>
-          <a href="about.html" class="btn btn--outline">Read Full Bio</a>
-        </div>
-        <div class="skills__list">
-          <div class="skill__category">
-            <h4>Aerospace</h4>
-            <div class="skill__tags">
-              <span class="skill__tag">Airfoil Design</span>
-              <span class="skill__tag">Aerial Imaging</span>
-              <span class="skill__tag">SEAPERCH</span>
-            </div>
-          </div>
-          <div class="skill__category">
-            <h4>Electronics</h4>
-            <div class="skill__tags">
-              <span class="skill__tag">Multisim</span>
-              <span class="skill__tag">Digital Electronics</span>
-              <span class="skill__tag">Circuitry</span>
-            </div>
-          </div>
-          <div class="skill__category">
-            <h4>Design &amp; Build</h4>
-            <div class="skill__tags">
-              <span class="skill__tag">CAD Modeling</span>
-              <span class="skill__tag">Puzzle Cube</span>
-              <span class="skill__tag">Pinhole Camera</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<main>
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero__badges">
-        <span class="badge">Aerospace Engineering</span>
-        <span class="badge">Electronics</span>
-        <span class="badge">CAD &amp; Design</span>
-        <span class="badge">Student Projects</span>
-      </div>
-      <h1 class="hero__title">Engineering <span style="color: var(--color-accent)">Portfolio</span></h1>
-      <p class="hero__subtitle">
-        Amir Suckra — exploring aerospace design, electronics, CAD modeling, and hands-on engineering projects.
-        Built during coursework at Bergen County Technical High School – Teterboro.
-      </p>
-      <div class="hero__cta">
-        <a href="projects.html" class="btn btn--primary">View Projects</a>
-        <a href="about.html" class="btn btn--outline">About Me</a>
-      </div>
-      <div class="hero__image" aria-label="Profile placeholder">
-        <img src="assets/images/profile-placeholder.svg" alt="Amir Suckra — engineer" width="320" height="320">
-      </div>
-    </div>
-  </section>

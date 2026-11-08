@@ -52,7 +52,8 @@ npx http-server
 
 ### 1. Replace placeholder text
 Every page contains `<!-- TODO -->` style placeholder content marked with a `visually-hidden` paragraph or `todo-badge` badge. Look for:
-- `profile-placeholder.svg` → replace with your actual photo (`assets/images/profile.jpg`)
+- Profile photo: `assets/images/amir-suckra.webp` (home hero and About page)
+- Resume: `assets/docs/Amir_Suckra_Resume.pdf` (public copy with street address and phone removed) plus page images `resume-page-1.webp` / `resume-page-2.webp` used by the in-page resume viewer. Re-export these if the resume changes.
 - Project descriptions → edit each `projects/*.html` file
 - Contact form → update the `action` URL in `contact.html` with your Formspree/Netlify Forms endpoint
 - Social links → update the LinkedIn/GitHub URLs in the footer of each page
