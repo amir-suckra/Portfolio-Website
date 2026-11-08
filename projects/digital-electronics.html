@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Electronics | Amir Suckra Engineering Portfolio</title>
-  <meta name="description" content="Digital logic circuits project — gates, flip-flops, and sequential design.">
+  <meta name="description" content="PLTW Digital Electronics: logic design, Multisim simulation, breadboarding, and Arduino.">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -41,14 +41,12 @@
       <div class="project-hero__content">
         <span class="project-hero__course">Digital Electronics</span>
         <h1 class="project-hero__title">Digital Electronics</h1>
-        <div class="project-hero__meta">
-          <span>Status: Completed</span>
-          <span>Type: Coursework</span>
-        </div>
         <div class="project-hero__tech">
-          <span class="skill__tag">Digital Logic</span>
-          <span class="skill__tag">Circuits</span>
-          <span class="skill__tag">Electronics</span>
+          <span class="skill__tag">PLTW</span>
+          <span class="skill__tag">Boolean Logic</span>
+          <span class="skill__tag">K-Maps</span>
+          <span class="skill__tag">Multisim</span>
+          <span class="skill__tag">Arduino</span>
         </div>
       </div>
     </div>
@@ -59,43 +57,40 @@
       <div class="project-detail__grid">
         <div class="project-detail__content">
           <h2>Project Goal</h2>
-          <p>Designed and analyzed digital logic circuits — covering logic gates, combinational logic, flip-flops, and sequential circuit design.</p>
-          <p class="visually-hidden"><strong>TODO:</strong> Replace this placeholder with details about your digital electronics project — circuits built, logic designs, truth tables, and hardware used.</p>
+          <p>Digital Electronics is a Project Lead The Way (PLTW) course on the circuits inside every modern device. Each design follows the same professional workflow: truth table, Boolean simplification or Karnaugh map, a simulation in <strong>Multisim</strong> to prove the logic, then a physical build on a breadboard.</p>
           <h2>What I Built</h2>
-          <p>Functional digital logic designs with verified truth tables and timing behavior.</p>
+          <ul>
+            <li><strong>Soldered random number generator.</strong> I soldered a working circuit board, then tested its output over 100 trials to check how evenly it distributes numbers.</li>
+            <li><strong>Majority-vote machine.</strong> An electronic voting circuit for a four-member board where the president breaks ties, taken from truth table to Boolean simplification and built with only AND, OR, and NOT gates.</li>
+            <li><strong>Fireplace control circuit.</strong> A gas-fireplace safety circuit that stays lit when three of four flame sensors agree, plus a diagnostic output that flags a faulty sensor. Both were simplified with K-maps, one built NAND-only and one NOR-only, and verified in Multisim.</li>
+            <li><strong>Seven-segment display circuit.</strong> A three-input, seven-output combinational circuit that steps through a date on a seven-segment display, K-mapped segment by segment, simulated, then breadboarded.</li>
+            <li><strong>Counters and state machines.</strong> Asynchronous and synchronous up/down counters built from flip-flops and MSI counter chips, plus a tollbooth state machine.</li>
+            <li><strong>Microcontrollers.</strong> Arduino sketches that read buttons, potentiometers, and a two-axis accelerometer, and drive a servo with pulse-width modulation (PWM).</li>
+          </ul>
           <h2>Photos &amp; Visuals</h2>
           <div class="project-gallery" id="gallery">
             <figure>
-              <a href="../assets/images/projects/multisim-counter-display.webp" target="_blank" rel="noopener"><img src="../assets/images/projects/multisim-counter-display.webp" alt="Multisim schematic of a multi-chip counter circuit driving two seven-segment displays" loading="lazy"></a>
+              <a href="../assets/images/projects/multisim-counter-display.webp" target="_blank" rel="noopener"><img decoding="async" width="640" height="409" src="../assets/images/projects/multisim-counter-display-sm.webp" srcset="../assets/images/projects/multisim-counter-display-sm.webp 640w, ../assets/images/projects/multisim-counter-display.webp 1400w" sizes="(max-width: 700px) 100vw, 320px" alt="Multisim schematic of a multi-chip counter circuit driving two seven-segment displays" loading="lazy"></a>
               <figcaption>Counter circuit simulated in Multisim, driving two seven-segment displays.</figcaption>
             </figure>
             <figure>
-              <a href="../assets/images/projects/multisim-sequential-circuit.webp" target="_blank" rel="noopener"><img src="../assets/images/projects/multisim-sequential-circuit.webp" alt="Multisim schematic of a sequential logic circuit with flip-flops and logic gates" loading="lazy"></a>
+              <a href="../assets/images/projects/multisim-sequential-circuit.webp" target="_blank" rel="noopener"><img decoding="async" width="640" height="220" src="../assets/images/projects/multisim-sequential-circuit-sm.webp" srcset="../assets/images/projects/multisim-sequential-circuit-sm.webp 640w, ../assets/images/projects/multisim-sequential-circuit.webp 1400w" sizes="(max-width: 700px) 100vw, 320px" alt="Multisim schematic of a sequential logic circuit with flip-flops and logic gates" loading="lazy"></a>
               <figcaption>Sequential logic circuit with flip-flops, built and tested in Multisim.</figcaption>
             </figure>
           </div>
           <h2>Build Process</h2>
           <ol class="project-steps">
-            <li><strong>Plan</strong> — defined requirements and constraints for the project.</li>
-            <li><strong>Design</strong> — sketched, modeled, or simulated the solution before building.</li>
-            <li><strong>Build</strong> — fabricated, assembled, or implemented the design.</li>
-            <li><strong>Test &amp; Refine</strong> — evaluated results and iterated on the design.</li>
+            <li><strong>Specify.</strong> Turn the problem statement into a truth table of every input combination.</li>
+            <li><strong>Simplify.</strong> Reduce the logic with Boolean algebra, De Morgan's theorems, or Karnaugh maps, and convert it to NAND-only or NOR-only form when required.</li>
+            <li><strong>Simulate.</strong> Enter the circuit in Multisim and confirm it behaves correctly for every input before touching hardware.</li>
+            <li><strong>Build &amp; test.</strong> Wire it on a breadboard with 74LS-series logic chips and verify it matches the simulation.</li>
           </ol>
-          <p class="visually-hidden"><strong>TODO:</strong> Replace the generic steps above with the specific steps you took on this project, and add photos of each stage.</p>
           <h2>Key Problem Solved</h2>
-          <p>Minimizing logic complexity and verifying sequential circuit behavior across all input states.</p>
+          <p>Minimizing logic so circuits use fewer chips, and catching design mistakes in simulation so that a breadboard that doesn't work points to a wiring error, not a design error.</p>
           <h2>Skills Gained</h2>
-          <p>Boolean algebra, sequential logic design, and how digital systems are built from simple gates.</p>
+          <p>Boolean algebra, Karnaugh mapping, combinational and sequential logic, circuit simulation in Multisim, breadboarding and soldering, and introductory Arduino programming.</p>
         </div>
         <div class="project-sidebar">
-          <div class="sidebar__card">
-            <h3>Tools &amp; Skills</h3>
-            <div class="skill__tags">
-              <span class="skill__tag">Digital Logic</span>
-              <span class="skill__tag">Circuits</span>
-              <span class="skill__tag">Electronics</span>
-            </div>
-          </div>
           <div class="sidebar__card">
             <h3>📁 Project Files</h3>
             <div class="sidebar__links">
@@ -104,7 +99,8 @@
           </div>
           <div class="sidebar__card">
             <h3>📋 Project Snapshot</h3>
-            <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0.5rem;"><strong>Course:</strong> Digital Electronics</p>
+            <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0.5rem;"><strong>Course:</strong> Digital Electronics (PLTW)</p>
+            <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0.5rem;"><strong>Year:</strong> 2024–25 (10th grade)</p>
             <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0.5rem;"><strong>Status:</strong> Completed</p>
             <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0;"><strong>Type:</strong> Coursework</p>
           </div>
@@ -120,6 +116,6 @@
   </div>
 </footer>
 
-<script src="../js/main.js"></script>
+<script src="../js/main.js" defer></script>
 </body>
 </html>

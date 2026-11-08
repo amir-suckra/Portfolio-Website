@@ -301,3 +301,8 @@ body.modal-open { overflow: hidden; }
 .data-table th { color: var(--color-text); background: var(--color-surface); }
 .table-scroll { overflow-x: auto; }
 .project-detail__content, .project-sidebar { min-width: 0; }
+.course-card__more { font-size: var(--fs-sm); font-weight: 600; margin-left: 0.5rem; white-space: nowrap; color: var(--color-accent); }
+.course-card__more:hover { text-decoration: underline; }
+.about__preview { max-width: 70ch; margin: 0 auto; text-align: center; }
+.about__preview p { color: var(--color-text-muted); margin-bottom: 1.5rem; }
+.about__preview-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
