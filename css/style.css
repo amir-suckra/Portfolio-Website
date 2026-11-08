@@ -1,7 +1,6 @@
 /*
  * Portfolio-Website — Global Styles
  * Engineering Portfolio for Amir Suckra
- * TODO: Replace placeholder content, images, and project details with your real work.
  */
 
 /* Design tokens / CSS variables */
@@ -41,10 +40,10 @@
   --color-surface-hover: #f1f5f9;
   --color-text: #0f172a;
   --color-text-muted: #475569;
-  --color-accent: #0284c7;
-  --color-accent-hover: #0369a1;
+  --color-accent: #0369a1;
+  --color-accent-hover: #075985;
   --color-border: #cbd5e1;
-  --color-focus: #0284c7;
+  --color-focus: #0369a1;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
@@ -123,7 +122,6 @@ footer { margin-top: auto; padding: 3rem 0 2rem; border-top: 1px solid var(--col
 .sidebar__links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 .sidebar__link { flex: 1 1 140px; display: flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); font-size: var(--fs-sm); font-weight: 600; color: var(--color-text-muted); transition: all var(--transition); }
 .sidebar__link:hover { border-color: var(--color-accent); color: var(--color-accent); background-color: var(--color-surface-hover); }
-.todo-badge { font-size: var(--fs-xs); padding: 0.15rem 0.5rem; border: 1px solid var(--color-accent); border-radius: 4px; color: var(--color-accent); margin-left: 0.5rem; }
 .hero { padding: 6rem 0 4rem; text-align: center; }
 .hero__badges { display: inline-flex; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; justify-content: center; }
 .badge { font-size: var(--fs-xs); font-weight: 600; padding: 0.4rem 0.85rem; border: 1px solid var(--color-border); border-radius: 999px; color: var(--color-text-muted); background-color: var(--color-surface); transition: all var(--transition); }
@@ -283,11 +281,11 @@ body.modal-open { overflow: hidden; }
 .project-gallery { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); margin: 0.5rem 0 2rem; scroll-margin-top: calc(var(--header-height) + 1rem); }
 .project-gallery--wide { grid-template-columns: 1fr; }
 .project-gallery figure { margin: 0; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; }
-.project-gallery a { display: block; background: #fff; }
+.project-gallery figure > a { display: block; background: #fff; }
 .project-gallery img { display: block; width: 100%; height: 220px; object-fit: contain; transition: transform var(--transition); }
 .project-gallery--wide img { height: auto; max-height: 420px; }
 .project-gallery img.is-photo { object-fit: cover; }
-.project-gallery a:hover img { transform: scale(1.02); }
+.project-gallery figure > a:hover img { transform: scale(1.02); }
 .project-gallery figcaption { font-size: var(--fs-xs); color: var(--color-text-muted); padding: 0.6rem 0.75rem; line-height: 1.45; }
 .project-card__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; background: #fff; }
 .project-card__thumb img.is-diagram { object-fit: contain; padding: 0.5rem; }
@@ -306,3 +304,6 @@ body.modal-open { overflow: hidden; }
 .about__preview { max-width: 70ch; margin: 0 auto; text-align: center; }
 .about__preview p { color: var(--color-text-muted); margin-bottom: 1.5rem; }
 .about__preview-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+
+[data-theme="light"] .btn--primary { color: #ffffff; }
+.project-gallery figcaption a { color: var(--color-accent); }
