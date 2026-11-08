@@ -59,10 +59,29 @@
       <div class="project-detail__grid">
         <div class="project-detail__content">
           <h2>Project Goal</h2>
-          <p>Designed and analyzed an airfoil profile for aerospace engineering coursework. This project explored the relationship between airfoil geometry and aerodynamic performance, including lift generation and drag characteristics.</p>
+          <p>Designed and analyzed a wing section based on the <strong>NACA 23018</strong> airfoil, the profile used on the Grumman F8F Bearcat. The project explored how airfoil geometry and angle of attack drive lift and drag.</p>
           <p class="visually-hidden"><strong>TODO:</strong> Replace this placeholder description with details about your actual airfoil design project — software used, airfoil type (NACA series, custom), test conditions, and results.</p>
           <h2>What I Built</h2>
-          <p>A finalized airfoil design with documented performance characteristics and a written design report.</p>
+          <p>I used JavaFoil to calculate lift, drag, and moment coefficients from 0° to 30° angle of attack, then built a spreadsheet that predicts lift and drag forces at airspeeds from 10 to 60 mph. I scaled the airfoil coordinates to a 3.5-inch chord, imported them into Autodesk Inventor, and modeled the wing section for 3D printing.</p>
+          <h2>Photos &amp; Visuals</h2>
+          <div class="project-gallery project-gallery--wide" id="gallery">
+            <figure>
+              <a href="../assets/images/projects/airfoil-naca23018-cad.webp" target="_blank" rel="noopener"><img src="../assets/images/projects/airfoil-naca23018-cad.webp" alt="Autodesk Inventor model of a wing section extruded from the NACA 23018 airfoil profile" loading="lazy"></a>
+              <figcaption>My NACA 23018 wing section modeled in Autodesk Inventor from the scaled airfoil coordinates. The 3D model is available to download as an STL file.</figcaption>
+            </figure>
+          </div>
+          <h2>Performance Data (JavaFoil)</h2>
+          <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>Angle of attack</th><th>0°</th><th>5°</th><th>10°</th><th>15°</th><th>20°</th><th>25°</th><th>30°</th></tr></thead>
+            <tbody>
+              <tr><th>Lift coefficient (C<sub>L</sub>)</th><td>0.152</td><td>0.762</td><td>1.242</td><td>1.535</td><td>1.633</td><td>1.485</td><td>1.241</td></tr>
+              <tr><th>Drag coefficient (C<sub>D</sub>)</th><td>0.0184</td><td>0.0232</td><td>0.0423</td><td>0.1002</td><td>0.1896</td><td>0.3178</td><td>0.4779</td></tr>
+              <tr><th>Lift-to-drag (L/D)</th><td>8.2</td><td>32.9</td><td>29.4</td><td>15.3</td><td>8.6</td><td>4.7</td><td>2.6</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p>Lift climbs steadily up to about 20°, where the wing reaches its maximum lift and then starts to stall. The best efficiency (highest lift-to-drag ratio) comes at a much shallower angle, around 5°.</p>
           <h2>Build Process</h2>
           <ol class="project-steps">
             <li><strong>Plan</strong> — defined requirements and constraints for the project.</li>
@@ -88,8 +107,7 @@
           <div class="sidebar__card">
             <h3>📁 Project Files</h3>
             <div class="sidebar__links">
-              <a href="#" class="sidebar__link">Photos &amp; Media <span class="todo-badge">TODO</span></a>
-              <a href="#" class="sidebar__link">Design Files <span class="todo-badge">TODO</span></a>
+              <a href="../assets/models/airfoil-naca23018.stl" class="sidebar__link" download>Download 3D Model (.stl)</a>
             </div>
           </div>
           <div class="sidebar__card">
