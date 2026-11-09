@@ -307,3 +307,4 @@ body.modal-open { overflow: hidden; }
 
 [data-theme="light"] .btn--primary { color: #ffffff; }
 .project-gallery figcaption a { color: var(--color-accent); }
+.project-gallery img.is-portrait { height: 400px; }
