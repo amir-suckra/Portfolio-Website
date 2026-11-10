@@ -201,6 +201,7 @@
       iframe.title = 'BlockBreak game';
       iframe.setAttribute('allow', 'autoplay; fullscreen');
       frame.replaceChildren(iframe);
+      frame.scrollIntoView({ behavior: 'smooth', block: 'end' });
       iframe.addEventListener('load', () => iframe.focus());
     });
   });

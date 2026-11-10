@@ -326,3 +326,5 @@ kbd { display: inline-block; padding: 0.05rem 0.4rem; border: 1px solid currentC
 .project-detail__content code { font-family: var(--font-mono); font-size: 0.9em; }
 .project-gallery--video { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
 .project-gallery video { display: block; width: 100%; height: auto; background: #111; }
+/* Keep the whole game (including the paddle) on screen, even on a phone held sideways */
+.game-frame { max-width: min(800px, calc((100svh - var(--header-height) - 1.5rem) * 1.6)); margin-left: auto; margin-right: auto; }

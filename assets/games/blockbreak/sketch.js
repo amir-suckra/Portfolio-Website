@@ -123,7 +123,10 @@ function movePaddle() {
   if (keyIsDown(RIGHT_ARROW)) {
     paddle.x += paddle.speed;
   }
-  
+    // Touch controls: the paddle follows your finger
+  if (touches.length > 0) {
+    paddle.x = touches[0].x - paddle.w / 2;
+  }
   //keeps paddle inside screen
   paddle.x = constrain(paddle.x, 0, width - paddle.w);
 }
@@ -143,7 +146,7 @@ function startScreen() {
   textStyle(NORMAL);
 
   drawButton(300, 250, 200, 100, "Start", "grey");
-  text("Use Arrows to Move Paddle", width / 2, 420);
+    text("Use Arrows or Drag to Move Paddle", width / 2, 420);
 }
 
 //Main Game Logic
@@ -290,4 +293,8 @@ function resetGame() {
   ball.speedy = -7;
 
   createBlocks(); // reset blocks
+}
+// Stops the page from scrolling while you drag on the game
+function touchMoved() {
+  return false;
 }
