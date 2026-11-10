@@ -191,4 +191,17 @@
       if (lastTrigger) lastTrigger.focus();
     });
   }
+
+  /* Click-to-play game embeds: load the game only when the visitor asks for it */
+  document.querySelectorAll('[data-game-launch]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const frame = btn.closest('.game-frame');
+      const iframe = document.createElement('iframe');
+      iframe.src = frame.dataset.gameSrc;
+      iframe.title = 'BlockBreak game';
+      iframe.setAttribute('allow', 'autoplay; fullscreen');
+      frame.replaceChildren(iframe);
+      iframe.addEventListener('load', () => iframe.focus());
+    });
+  });
 })();

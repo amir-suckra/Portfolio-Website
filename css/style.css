@@ -308,3 +308,21 @@ body.modal-open { overflow: hidden; }
 [data-theme="light"] .btn--primary { color: #ffffff; }
 .project-gallery figcaption a { color: var(--color-accent); }
 .project-gallery img.is-portrait { height: 400px; }
+/* Comfortable tap targets and minimum text size */
+.back-link { display: inline-flex; align-items: center; min-height: 44px; padding: 0.25rem 0; }
+.contact-item__text a { display: inline-block; padding: 0.4rem 0; }
+.course-card__more { display: inline-block; padding: 0.3rem 0; }
+.project-card__tech .skill__tag { font-size: 0.75rem; }
+
+/* Playable game embed */
+.game-frame { position: relative; width: 100%; max-width: 800px; aspect-ratio: 8 / 5; margin: 0.5rem 0 2rem; border-radius: var(--radius-md); overflow: hidden; background: #2b2b2b; border: 1px solid var(--color-border); scroll-margin-top: calc(var(--header-height) + 1rem); }
+.game-frame__poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.45); }
+.game-frame__overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; padding: 1rem; text-align: center; color: #f1f5f9; }
+.game-frame__overlay p { color: #e2e8f0 !important; font-size: var(--fs-sm) !important; margin: 0 !important; max-width: 36ch; }
+.game-frame__overlay a { color: #7dd3fc !important; font-size: var(--fs-sm); padding: 0.4rem 0; }
+.game-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+kbd { display: inline-block; padding: 0.05rem 0.4rem; border: 1px solid currentColor; border-radius: 4px; font-family: var(--font-mono); font-size: 0.85em; }
+.code-block { background: #0b1220; color: #e2e8f0; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1rem 1.1rem; overflow-x: auto; font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.55; margin: 0 0 1.5rem; }
+.project-detail__content code { font-family: var(--font-mono); font-size: 0.9em; }
+.project-gallery--video { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.project-gallery video { display: block; width: 100%; height: auto; background: #111; }

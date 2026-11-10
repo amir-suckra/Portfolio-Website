@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlockBreak | Amir Suckra Engineering Portfolio</title>
+  <meta name="description" content="BlockBreak: my AP Computer Science Principles final project, a five-level block-breaking game in JavaScript and p5.js. Play it in the browser.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container header__inner">
+    <a href="../index.html" class="nav__logo">Amir Suckra.</a>
+    <nav>
+      <ul class="nav__list" id="navList">
+        <li><a href="../index.html" class="nav__link">Home</a></li>
+        <li><a href="../about.html" class="nav__link">About</a></li>
+        <li><a href="../coursework.html" class="nav__link">Coursework</a></li>
+        <li><a href="../projects.html" class="nav__link">Projects</a></li>
+        <li><a href="../contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav__actions">
+      <button class="theme-toggle" aria-label="Switch to light mode">🌙</button>
+      <button class="nav__hamburger" aria-expanded="false" aria-controls="navList" aria-label="Toggle menu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <div class="project-hero__nav">
+        <a href="../projects.html" class="back-link">← Back to Projects</a>
+      </div>
+      <div class="project-hero__content">
+        <span class="project-hero__course">AP Computer Science Principles</span>
+        <h1 class="project-hero__title">BlockBreak</h1>
+        <div class="project-hero__tech">
+          <span class="skill__tag">JavaScript</span>
+          <span class="skill__tag">p5.js</span>
+          <span class="skill__tag">Game Design</span>
+          <span class="skill__tag">User Testing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail">
+    <div class="container">
+      <div class="project-detail__grid">
+        <div class="project-detail__content">
+          <div class="course-context">
+            <h3>About the course</h3>
+            <p>BlockBreak was my final project for AP Computer Science Principles. The course's capstone is the College Board <em>Create</em> performance task: each student designs and builds an original program that uses a list, a procedure with a parameter, and an algorithm that combines sequencing, selection, and iteration.</p>
+          </div>
+          <h2>Project Goal</h2>
+          <p><strong>Goal:</strong> design and program an original interactive game in JavaScript that meets the AP Create task requirements, then improve it through real user testing until it is fair, challenging, and easy to read.</p>
+          <h2>What I Built</h2>
+          <p><strong>BlockBreak</strong> is a block-breaking arcade game. You move a paddle with the arrow keys to bounce a ball into rows of orange blocks, earning a point for every block you break. You have three lives. Clearing every block moves you up a level, and each of the five levels adds another row of blocks and speeds up the ball. The game has a start screen, the game itself, and a win or game-over screen with a restart button, all run by a simple state machine.</p>
+
+          <h2 id="play">Play It</h2>
+          <div class="game-frame" data-game-src="../assets/games/blockbreak/index.html">
+            <img src="../assets/video/blockbreak-after-poster.webp" width="960" height="600" alt="" decoding="async" class="game-frame__poster">
+            <div class="game-frame__overlay">
+              <button type="button" class="btn btn--primary game-frame__launch" data-game-launch>▶ Play BlockBreak</button>
+              <p>Click <strong>Start</strong>, then use the <kbd>←</kbd> <kbd>→</kbd> arrow keys. Best on a computer with a keyboard.</p>
+              <a href="../assets/games/blockbreak/index.html" target="_blank" rel="noopener">Open in a new tab</a>
+            </div>
+          </div>
+
+          <h2 id="demo">Demo Videos</h2>
+          <div class="project-gallery project-gallery--video">
+            <figure>
+              <video controls muted playsinline preload="none" width="960" height="600" poster="../assets/video/blockbreak-before-poster.webp">
+                <source src="../assets/video/blockbreak-before.webm" type="video/webm">
+                <source src="../assets/video/blockbreak-before.mp4" type="video/mp4">
+              </video>
+              <figcaption><strong>Before:</strong> an early version with a single level on a bright blue background.</figcaption>
+            </figure>
+            <figure>
+              <video controls muted playsinline preload="none" width="960" height="600" poster="../assets/video/blockbreak-after-poster.webp">
+                <source src="../assets/video/blockbreak-after.webm" type="video/webm">
+                <source src="../assets/video/blockbreak-after.mp4" type="video/mp4">
+              </video>
+              <figcaption><strong>After:</strong> the final version, with levels, a level counter, and a higher-contrast background.</figcaption>
+            </figure>
+          </div>
+
+          <h2>How It Works</h2>
+          <p>The blocks are stored in a list. <code>createBlocks()</code> fills it with one object per block (position, size, and whether it is still visible), adding more rows at higher levels. The required procedure, <code>BlocksAndScore(pointsPerBlock)</code>, runs every frame. It loops through the list (<em>iteration</em>), skips blocks that are already broken and checks whether the ball overlaps each remaining one (<em>selection</em>), then hides the block, bounces the ball, and adds points (<em>sequencing</em>):</p>
+          <pre class="code-block"><code>function BlocksAndScore(pointsPerBlock) {
+  for (let i = 0; i &lt; blocks.length; i++) {
+    let b = blocks[i];
+    if (b.visible) {
+      fill(255, 150, 0);
+      rect(b.x, b.y, b.w, b.h);
+
+      let ballLeft = ball.x - ball.r;
+      let ballRight = ball.x + ball.r;
+      let ballTop = ball.y - ball.r;
+      let ballBottom = ball.y + ball.r;
+
+      if (ballRight &gt; b.x &amp;&amp; ballLeft &lt; b.x + b.w &amp;&amp;
+          ballBottom &gt; b.y &amp;&amp; ballTop &lt; b.y + b.h) {
+        b.visible = false;
+        ball.speedy *= -1;        // bounce the ball
+        score += pointsPerBlock;
+        break;                    // only one block per frame
+      }
+    }
+  }
+}</code></pre>
+
+          <h2>Build Process</h2>
+          <ol class="project-steps">
+            <li><strong>Plan the game.</strong> Defined the screens (start, game, end), the ball and paddle objects, and the list of blocks.</li>
+            <li><strong>Build the core loop.</strong> Paddle movement with the arrow keys, ball motion, wall and paddle bounces, scoring, and lives.</li>
+            <li><strong>Get collisions right.</strong> Compared the ball's edges, not just its center, against each block and the paddle so hits match what you see on screen.</li>
+            <li><strong>Test with real players.</strong> Had other people play the game, then kept a change log of their feedback and my fixes.</li>
+            <li><strong>Iterate on the feedback.</strong> Made the paddle faster, fixed the ball passing through blocks and a neighboring block disappearing on a hit, tightened the hitboxes, added five levels with rising difficulty, and darkened the background after one tester rated readability only a 3 out of 5.</li>
+          </ol>
+
+          <h2>My Role</h2>
+          <p>This was an individual project. I designed the game and wrote the program. The start screen and the clickable-button helper are adapted from an earlier class project, and that is credited in the code comments.</p>
+          <h2>Key Problem Solved</h2>
+          <p>Collision bugs. At first the ball could pass straight through blocks, and sometimes a block next to the one that was hit would disappear too. Checking the ball's edges against each block's exact rectangle, and stopping after the first hit in each frame, made every hit register once and only once.</p>
+          <h2>What I Learned</h2>
+          <p>How games run as a loop of update and draw steps controlled by a state machine; collision detection; organizing code into procedures with parameters and data into lists; and how much real user testing improves a program. My change log still has two ideas for the next version: power-ups and upgraded graphics.</p>
+        </div>
+        <div class="project-sidebar">
+          <div class="sidebar__card">
+            <h3>📁 Project Files</h3>
+            <div class="sidebar__links">
+              <a href="#play" class="sidebar__link">Play the Game</a>
+              <a href="#demo" class="sidebar__link">Demo Videos</a>
+              <a href="https://github.com/amir-suckra/BlockBreak" class="sidebar__link" target="_blank" rel="noopener">Source Code (GitHub)</a>
+            </div>
+          </div>
+          <div class="sidebar__card">
+            <h3>📋 Project Snapshot</h3>
+            <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0.5rem;"><strong>Course:</strong> AP Computer Science Principles</p>
+            <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0.5rem;"><strong>Year:</strong> 2025–26 (11th grade)</p>
+            <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0.5rem;"><strong>Role:</strong> Individual project</p>
+            <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0.5rem;"><strong>Built with:</strong> JavaScript, p5.js</p>
+            <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0.5rem;"><strong>Status:</strong> Completed</p>
+            <p style="color:var(--color-text-muted);font-size:var(--fs-sm);margin-bottom:0;"><strong>Type:</strong> Final project</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer__inner">
+    <p class="footer__copy">&copy; 2026 Amir Suckra. Built for engineering coursework.</p>
+  </div>
+</footer>
+
+<script src="../js/main.js" defer></script>
+</body>
+</html>

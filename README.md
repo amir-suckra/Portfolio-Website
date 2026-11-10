@@ -23,6 +23,8 @@ Personal portfolio website for **Amir Suckra**, an Aerospace Engineering student
 ├── assets/docs/        # Resume PDF and page images for the resume viewer
 ├── assets/images/      # Photo, logos, project images
 ├── assets/models/      # Downloadable 3D model (airfoil STL)
+├── assets/games/       # BlockBreak (my AP CSP game), playable on projects/blockbreak.html
+├── assets/video/       # BlockBreak demo videos (WebM + MP4)
 └── vercel.json         # Vercel caching headers
 ```
 
