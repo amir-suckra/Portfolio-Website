@@ -308,3 +308,8 @@ body.modal-open { overflow: hidden; }
 [data-theme="light"] .btn--primary { color: #ffffff; }
 .project-gallery figcaption a { color: var(--color-accent); }
 .project-gallery img.is-portrait { height: 400px; }
+/* Comfortable tap targets and minimum text size */
+.back-link { display: inline-flex; align-items: center; min-height: 44px; padding: 0.25rem 0; }
+.contact-item__text a { display: inline-block; padding: 0.4rem 0; }
+.course-card__more { display: inline-block; padding: 0.3rem 0; }
+.project-card__tech .skill__tag { font-size: 0.75rem; }
