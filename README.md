@@ -5,6 +5,7 @@ Personal portfolio website for **Amir Suckra**, an Aerospace Engineering student
 ## Tech stack
 
 - **Plain HTML, CSS, and JavaScript.** There is no framework and no build step.
+- **Cache busting:** after changing `css/style.css`, `js/main.js`, or the BlockBreak game, bump the `?v=` number where they are referenced so returning visitors get the new version.
 - **Contact form:** [Formspree](https://formspree.io).
 - **Images:** compressed WebP, with 640px `-sm.webp` versions for thumbnails.
 - **Built with an AI coding tool:** [Claude Code](https://claude.com/claude-code) by Anthropic. It was used to write and refactor the pages, organize content from my coursework files, optimize images, and test the site.
@@ -25,7 +26,7 @@ Personal portfolio website for **Amir Suckra**, an Aerospace Engineering student
 ├── assets/models/      # Downloadable 3D model (airfoil STL)
 ├── assets/games/       # BlockBreak (my AP CSP game), playable on projects/blockbreak.html
 ├── assets/video/       # BlockBreak demo videos (WebM + MP4)
-└── vercel.json         # Vercel caching headers
+└── vercel.json         # Vercel caching headers (images/videos cached 7 days; pages, CSS, JS, game, resume always revalidated)
 ```
 
 ## Run it locally
@@ -50,6 +51,7 @@ Then open http://localhost:8000. You can also open `index.html` directly in a br
 - **Projects:** edit `projects/<name>.html` and its card in `projects.html`.
 - **Resume:** replace `assets/docs/Amir_Suckra_Resume.pdf` and the two `resume-page-*.webp` images used by the viewer.
 - **Images:** add WebP files to `assets/images/projects/` along with a 640px `-sm.webp` version.
+- **Cache busting:** after changing `css/style.css`, `js/main.js`, or the BlockBreak game, bump the `?v=` number where they are referenced so returning visitors get the new version.
 - **Contact form:** messages go to the Formspree form set in the `data-endpoint` attribute of the form in `contact.html`.
 
 ## Contact

@@ -328,3 +328,8 @@ kbd { display: inline-block; padding: 0.05rem 0.4rem; border: 1px solid currentC
 .project-gallery video { display: block; width: 100%; height: auto; background: #111; }
 /* Keep the whole game (including the paddle) on screen, even on a phone held sideways */
 .game-frame { max-width: min(800px, calc((100svh - var(--header-height) - 1.5rem) * 1.6)); margin-left: auto; margin-right: auto; }
+.game-frame iframe { touch-action: none; }
+/* Before the game loads, the panel grows to fit its text (small phones); once playing it is exactly 8:5 */
+.game-frame:not(.is-playing) { aspect-ratio: auto; min-height: min(320px, 62.5vw, calc(100svh - var(--header-height) - 1.5rem)); display: flex; }
+.game-frame:not(.is-playing) .game-frame__overlay { position: relative; inset: auto; flex: 1; padding: 1.5rem 1rem; }
+@media (max-width: 360px) { .game-frame__overlay .btn { padding: 0.7rem 1.1rem; } }
