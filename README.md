@@ -1,61 +1,35 @@
 # Amir Suckra: Engineering Portfolio
 
-Personal portfolio website for **Amir Suckra**, an Aerospace Engineering student at Bergen County Technical High School – Teterboro. It presents my background, coursework, projects, competitions (NASA HUNCH and StellarXplorers), skills, resume, and a way to contact me.
+Portfolio site for Amir Suckra, an Aerospace Engineering student at Bergen County Technical High School – Teterboro. It covers my projects, coursework, competitions (NASA HUNCH and StellarXplorers), skills, and resume, and includes a playable version of my AP CSP game, BlockBreak.
 
-## Tech stack
+**Stack:** plain HTML, CSS, and JavaScript, with no build step. The contact form uses [Formspree](https://formspree.io).
+**Built with:** [Claude Code](https://claude.com/claude-code) (AI coding tool).
 
-- **Plain HTML, CSS, and JavaScript.** There is no framework and no build step.
-- **Cache busting:** after changing `css/style.css`, `js/main.js`, or the BlockBreak game, bump the `?v=` number where they are referenced so returning visitors get the new version.
-- **Contact form:** [Formspree](https://formspree.io).
-- **Images:** compressed WebP, with 640px `-sm.webp` versions for thumbnails.
-- **Built with an AI coding tool:** [Claude Code](https://claude.com/claude-code) by Anthropic. It was used to write and refactor the pages, organize content from my coursework files, optimize images, and test the site.
-
-## Site structure
-
-```
-├── index.html          # Home: hero, about preview, featured projects, contact
-├── about.html          # Bio, experience, education, honors, skills, resume viewer
-├── coursework.html     # Courses, dual enrollment, NASA HUNCH, StellarXplorers
-├── projects.html       # Filterable grid of projects
-├── projects/*.html     # One page per project (description, role, process, what I learned)
-├── contact.html        # Contact form, email, LinkedIn, GitHub
-├── css/style.css       # All styles (light/dark theme, responsive layout)
-├── js/main.js          # Theme toggle, mobile menu, project filters, contact form, resume viewer
-├── assets/docs/        # Resume PDF and page images for the resume viewer
-├── assets/images/      # Photo, logos, project images
-├── assets/models/      # Downloadable 3D model (airfoil STL)
-├── assets/games/       # BlockBreak (my AP CSP game), playable on projects/blockbreak.html
-├── assets/video/       # BlockBreak demo videos (WebM + MP4)
-└── vercel.json         # Vercel caching headers (images/videos cached 7 days; pages, CSS, JS, game, resume always revalidated)
-```
-
-## Run it locally
-
-Because it is a static site, any local web server works:
+## Run locally
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000. You can also open `index.html` directly in a browser.
+Then open http://localhost:8000.
 
-## Deploy on Vercel
+## Deploy
 
-1. Push this repository to GitHub (it must be public).
-2. At [vercel.com](https://vercel.com), choose **Add New → Project** and import this repository.
-3. Use **Framework Preset: Other**. Leave the build command empty and the output directory as the repository root.
-4. Click **Deploy**. The site goes live at `https://<project-name>.vercel.app`, and Vercel redeploys automatically on every push to `main`.
+Import the repo at [vercel.com](https://vercel.com) (**Add New → Project**, Framework Preset: **Other**, no build command). Every push to `main` redeploys the site.
 
-## Updating content
+## Structure
 
-- **Projects:** edit `projects/<name>.html` and its card in `projects.html`.
-- **Resume:** replace `assets/docs/Amir_Suckra_Resume.pdf` and the two `resume-page-*.webp` images used by the viewer.
-- **Images:** add WebP files to `assets/images/projects/` along with a 640px `-sm.webp` version.
-- **Cache busting:** after changing `css/style.css`, `js/main.js`, or the BlockBreak game, bump the `?v=` number where they are referenced so returning visitors get the new version.
-- **Contact form:** messages go to the Formspree form set in the `data-endpoint` attribute of the form in `contact.html`.
+```
+index.html, about.html, coursework.html, projects.html, contact.html
+projects/          one page per project
+css/style.css      styles (light/dark, responsive)
+js/main.js         theme, menu, filters, contact form, resume viewer, game launcher
+assets/            images, resume, videos, BlockBreak game, airfoil STL
+vercel.json        cache headers
+```
 
-## Contact
+## Updating
 
-- Email: suckra.amir@gmail.com
-- LinkedIn: [linkedin.com/in/amir-suckra-32a355405](https://www.linkedin.com/in/amir-suckra-32a355405)
-- GitHub: [github.com/amir-suckra](https://github.com/amir-suckra)
+- **Images:** add WebP files plus a 640px `-sm.webp` copy for thumbnails.
+- **Resume:** replace the PDF and the two `resume-page-*.webp` images in `assets/docs/`.
+- **CSS, JS, or game changes:** bump the `?v=` number where the file is referenced so returning visitors get the new version.
