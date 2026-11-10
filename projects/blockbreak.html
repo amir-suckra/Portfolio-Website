@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BlockBreak | Amir Suckra Engineering Portfolio</title>
   <meta name="description" content="BlockBreak: my AP Computer Science Principles final project, a five-level block-breaking game in JavaScript and p5.js. Play it in the browser.">
-  <link rel="stylesheet" href="../css/style.css?v=2">
+  <link rel="stylesheet" href="../css/style.css?v=3">
 </head>
 <body>
 
 <header>
   <div class="container header__inner">
-    <a href="../index.html" class="nav__logo">Amir Suckra.</a>
+    <a href="../index.html" class="nav__logo">Amir Suckra</a>
     <nav>
       <ul class="nav__list" id="navList">
         <li><a href="../index.html" class="nav__link">Home</a></li>
@@ -69,9 +69,13 @@
             <img src="../assets/video/blockbreak-after-poster.webp" width="960" height="600" alt="" decoding="async" class="game-frame__poster">
             <div class="game-frame__overlay">
               <button type="button" class="btn btn--primary game-frame__launch" data-game-launch>▶ Play BlockBreak</button>
-              <p>Click or tap <strong>Start</strong>, then use the <kbd>←</kbd> <kbd>→</kbd> arrow keys, or drag your finger on a phone. Turn your phone sideways for a bigger screen.</p>
-              <a href="../assets/games/blockbreak/index.html?v=2" target="_blank" rel="noopener">Open in a new tab</a>
+              <p>Click <strong>Start</strong>, then use the <kbd>←</kbd> <kbd>→</kbd> arrow keys. On a phone, use the link below.</p>
             </div>
+          </div>
+          <div class="game-mobile-note">
+            <span class="game-mobile-note__badge">📱 Required on mobile</span>
+            <p>On a phone or tablet, open the game in its own tab to play: tap <strong>Start</strong>, then drag your finger to move the paddle. Turn your phone sideways for a bigger screen.</p>
+            <a href="../assets/games/blockbreak/index.html?v=2" target="_blank" rel="noopener" class="btn btn--outline game-mobile-note__link">Open BlockBreak in a new tab ↗</a>
           </div>
 
           <h2 id="demo">Demo Videos</h2>
@@ -160,7 +164,7 @@
 
 <footer>
   <div class="container footer__inner">
-    <p class="footer__copy">&copy; 2026 Amir Suckra. Built for engineering coursework.</p>
+    <p class="footer__copy">&copy; 2026 Amir Suckra · Built for engineering coursework</p>
   </div>
 </footer>
 

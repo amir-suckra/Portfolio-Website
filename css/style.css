@@ -333,3 +333,8 @@ kbd { display: inline-block; padding: 0.05rem 0.4rem; border: 1px solid currentC
 .game-frame:not(.is-playing) { aspect-ratio: auto; min-height: min(320px, 62.5vw, calc(100svh - var(--header-height) - 1.5rem)); display: flex; }
 .game-frame:not(.is-playing) .game-frame__overlay { position: relative; inset: auto; flex: 1; padding: 1.5rem 1rem; }
 @media (max-width: 360px) { .game-frame__overlay .btn { padding: 0.7rem 1.1rem; } }
+/* "Open in a new tab" note under the game preview (required on mobile) */
+.game-mobile-note { max-width: 800px; margin: -1.25rem auto 2rem; padding: 0.9rem 1rem; border: 1px solid var(--color-border); border-left: 3px solid var(--color-accent); border-radius: var(--radius-md); background: var(--color-surface); display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; }
+.game-mobile-note__badge { font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-accent); }
+.game-mobile-note p { flex: 1 1 260px; margin: 0 !important; font-size: var(--fs-sm) !important; }
+.game-mobile-note__link { padding: 0.55rem 1rem; font-size: var(--fs-sm); }
