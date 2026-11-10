@@ -200,6 +200,7 @@
       iframe.src = frame.dataset.gameSrc;
       iframe.title = 'BlockBreak game';
       iframe.setAttribute('allow', 'autoplay; fullscreen');
+      frame.classList.add('is-playing');
       frame.replaceChildren(iframe);
       frame.scrollIntoView({ behavior: 'smooth', block: 'end' });
       iframe.addEventListener('load', () => iframe.focus());
